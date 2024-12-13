@@ -229,12 +229,14 @@ body{
 .about .row .content h3{
     font-size: 3rem;
     color: black;
+    text-transform: none;
 }
 
 .about .row .content p{
     font-size: 2rem;
     color: #333;
     padding: 1rem 0;
+    text-transform: none;
 }
 .pt-5 .container .row .section-head p{
     font-size: 2rem;
@@ -1172,12 +1174,14 @@ body{
     .about .row .content h3{
         font-size: 2rem;
         color: var(--color);
+        text-transform: none;
     }
     
     .about .row .content p{
         font-size: 1.3rem;
         color: #333;
         padding: 1rem 0;
+        text-transform: none;
     } 
 
     .clients {
