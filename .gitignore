@@ -1,33 +1,41 @@
-# Node.js dependencies
-node_modules/
-package-lock.json
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Build output
-css/style.css # Generated CSS file (development)
-css/*.css.map # CSS source maps
-.DS_Store # macOS system files
-.env # Environment variables
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# Logs and temp files
-*.log
-*.tmp
-tmp/
-temp/
+# testing
+/coverage
 
-# IDE specific files
-.idea/
-.vscode/
-*.swp
-*.swo
-*.sublime-project
-*.sublime-workspace
+# next.js
+/.next/
+/out/
 
-# OS generated files
-Thumbs.db
+# production
+/build
 
-# Optional: If you plan on having a build folder for distribution
-dist/
-build/
+# misc
+.DS_Store
+*.pem
 
-# PHP specific, if you are keeping those files
-# php/
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts

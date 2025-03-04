@@ -1,0 +1,89 @@
+<!-- HEADER SECTION -->
+<header class="header fixed top-0 left-0 w-full flex items-center justify-between px-[5.6rem] py-[1.5rem] z-100">
+    <h2 id="nav-title" class="nav-title text-white text-[2.1rem] transition-all duration-300 ease-in-out">
+        EQUIOPTIONS</h2>
+
+    <!-- EQ Logo (Initially Hidden) -->
+    <img id="nav-logo" src="images/favicon.png" alt="EQ Logo"
+        class="h-12 opacity-0 scale-100 transition-all duration-300 ease-in-out">
+
+    <ion-icon name="reorder-three-outline" class="three-bars"></ion-icon>
+    <nav class="navbar">
+        <ul class="flex items-center space-x-12">
+
+            <li><a href="#home" class="capitalize text-white text-[2.1rem] relative
+                after:block after:content-[''] after:h-px after:w-0 after:bg-white after:transition-all
+                after:duration-100 after:ease-in-out hover:after:w-full">
+                    home</a>
+            </li>
+
+            <li><a href="#about" class="capitalize text-white text-[2.1rem] relative
+                after:block after:content-[''] after:h-px after:w-0 after:bg-white after:transition-all
+                after:duration-100 after:ease-in-out hover:after:w-full">about</a>
+            </li>
+
+            <li><a href="#services" class="capitalize text-white text-[2.1rem] relative
+                after:block after:content-[''] after:h-px after:w-0 after:bg-white after:transition-all
+                after:duration-100 after:ease-in-out hover:after:w-full">services</a>
+            </li>
+
+            <li><a href="#contact" class="capitalize text-white text-[2.1rem] relative
+                after:block after:content-[''] after:h-px after:w-0 after:bg-white after:transition-all
+                after:duration-100 after:ease-in-out hover:after:w-full">contact</a>
+            </li>
+
+            <li><a href="#faq" class="capitalize text-white text-[2.1rem] relative
+                after:block after:content-[''] after:h-px after:w-0 after:bg-white after:transition-all
+                after:duration-100 after:ease-in-out hover:after:w-full">FAQ</a>
+            </li>
+
+        </ul>
+    </nav>
+</header>
+
+
+
+<!-- HERO SECTION -->
+<section id="home" class="home min-h-screen w-screen bg-[url(/images/subtle-prism.svg)] flex flex-col
+            items-left justify-center text-left
+            px-20 relative overflow-hidden">
+
+    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight leading-snug text-white">
+        <span class="block text-white">Simplifying Investments,</span>
+        <span class="text-white">Empowering Communities</span>
+    </h2>
+
+    <div class="flex flex-col md:flex-row gap-8 mt-10">
+        <a href="/listings" class="bg-[#ffffff] text-[#002e5f] text-2xl px-6 py-4
+                    rounded-lg shadow-md hover:bg-[#dfdfdf] transition duration-300">List your business
+            <ion-icon name="open-outline" class="text-3xl ml-2 mb-[-2px]"></ion-icon>
+        </a>
+
+        <a href="/investors" class="bg-transparent border-2 border-[#ffffff] text-[#ffffff] text-2xl px-6 py-4
+        rounded-lg shadow-md hover:bg-[#ffffff] hover:text-[#002e5f] transition duration-300">Become an Investor
+            <ion-icon name="open-outline" class="text-3xl ml-2 mb-[-2px]"></ion-icon>
+        </a>
+    </div>
+
+</section>
+
+
+<!-- GO BACK ON TOP BUTTON -->
+<a href="#" class="back-to-top fixed hidden bg-[#002e5f] text-white w-12 h-12 flex items-center justify-center text-5xl 
+        right-4 bottom-4 shadow-lg transition hover:bg-blue-800">
+    <ion-icon name="chevron-up-outline"></ion-icon>
+</a>
+
+
+<!-- JQuery -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("VPxgz4frBNx7QmDlB"); // Add your EmailJS public key here
+    })();
+</script>
+
+<script src="./js/main.js"></script>
