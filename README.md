@@ -3,9 +3,7 @@
 ## Todo:
 
 - Advisory board and FAQ sections
-- Move to React as listings/investors pages come in
-- JQuery -> vanilla JS
-- Security issues if any
+- Resolve for NPM and other security vulnerabilities
 
 <hr>
 

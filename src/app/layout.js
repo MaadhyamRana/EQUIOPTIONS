@@ -1,5 +1,4 @@
 import "@/styles/globals.css";
-import Script from "next/script";
 import { Libre_Baskerville } from "next/font/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -28,7 +27,6 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
 
-        <Script />
       </body>
     
     </html>

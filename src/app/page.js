@@ -1,7 +1,11 @@
 "use client";
 
+import { useState, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import useBackToTop from './components/BackToTop';
+import Counter from './components/Counter';
+import ContactForm from './components/ContactForm';
 
 import {
     TrendingUpOutline,
@@ -14,6 +18,10 @@ import {
 } from "react-ionicons";
 
 export default function Home() {
+
+    // Scroll back on top button
+    const { isVisible, scrollToTop } = useBackToTop();
+
     return (
         <main>
 
@@ -131,7 +139,7 @@ export default function Home() {
                                 height="3rem"
                                 width="3rem"
                             />
-                            <div className="counter text-4xl font-bold mt-4" data-target="">0</div>
+                            <Counter target={0} speed={120} />
                             <h3 className="text-xl font-medium mt-1 text-center">Total Investments</h3>
                         </div>
 
@@ -142,7 +150,7 @@ export default function Home() {
                                 height="3rem"
                                 width="3rem"
                             />
-                            <div className="counter text-4xl font-bold mt-4" data-target="">0</div>
+                            <Counter target={0} speed={120} />
                             <h3 className="text-xl font-medium mt-1 text-center">Number of Businesses</h3>
                         </div>
 
@@ -153,7 +161,7 @@ export default function Home() {
                                 height="3rem"
                                 width="3rem"
                             />
-                            <div className="counter text-4xl font-bold mt-4" data-target="">0</div>
+                            <Counter target={0} speed={120} />
                             <h3 className="text-xl font-medium mt-1 text-center">Number of Investors</h3>
                         </div>
                     </div>
@@ -165,51 +173,7 @@ export default function Home() {
             {/* CONTACT SECTION */}
             <section id="contact" className="text-center py-24 bg-gray-100">
                 <h1 className="text-[#002e5f] text-5xl border-eq mb-12">Get in touch</h1>
-
-                <div className="max-w-5xl mx-auto bg-white p-8 rounded-lg shadow-md">
-                    <form id="contactForm" className="space-y-5">
-                        <input
-                            type="text"
-                            name="name"
-                            placeholder="Name"
-                            required
-                            className="w-full p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#003e7d]"
-                        />
-
-                        <input
-                            type="tel"
-                            id="phone"
-                            name="phone"
-                            pattern="[0-9]{10}"
-                            required
-                            placeholder="Contact Number"
-                            maxLength="10"
-                            className="w-full p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#003e7d]"
-                        />
-
-                        <input
-                            type="email"
-                            name="email"
-                            placeholder="Email"
-                            required
-                            className="w-full p-4 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-[#003e7d]"
-                        />
-
-                        <textarea
-                            name="message"
-                            placeholder="Your Message"
-                            required
-                            className="w-full p-4 border border-gray-300 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-[#003e7d]"
-                        ></textarea>
-
-                        <button
-                            type="submit"
-                            className="w-full py-4 bg-[#003e7d] text-white text-xl font-medium rounded-full hover:bg-[#002e5f] transition"
-                        >
-                            Submit
-                        </button>
-                    </form>
-                </div>
+                <ContactForm />
             </section>
 
 
@@ -253,10 +217,16 @@ export default function Home() {
 
 
             {/* GO BACK ON TOP BUTTON - MAY NEED TO BE A COMPONENT */}
-            <Link href="#" className="fixed bg-[#002e5f] text-white w-12 h-12 flex items-center justify-center text-5xl 
-                    right-4 bottom-4 shadow-lg transition hover:bg-blue-800">
-                <ChevronUpOutline className="w-[30px] h-[30px]" />
-            </Link>
+            {isVisible && (
+                <button
+                    onClick={scrollToTop}
+                    className="fixed bg-[#002e5f] text-white w-12 h-12 flex items-center justify-center text-5xl 
+                     right-4 bottom-4 shadow-lg hover:bg-blue-800 opacity-100 transition-opacity duration-300"
+                >
+                    <ChevronUpOutline className="w-[30px] h-[30px]" />
+                </button>
+            )}
+
         </main>
     );
 }
