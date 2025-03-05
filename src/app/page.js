@@ -36,13 +36,13 @@ export default function Home() {
                 </h2>
 
                 <div className="flex flex-col md:flex-row gap-8 mt-10">
-                    <Link href="/listings" className="bg-[#ffffff] text-[#002e5f] text-2xl px-6 py-4
+                    <Link href="/businessListings" className="bg-[#ffffff] text-[#002e5f] text-2xl px-6 py-4
                                 rounded-lg shadow-md hover:bg-[#dfdfdf] transition duration-300 flex items-center">
                         List your business
                         <OpenOutline className="h-[16px] w-[16px] ml-3 mt-[-1px]" />
                     </Link>
 
-                    <Link href="/investors" className="bg-transparent border-2 border-[#ffffff] text-[#ffffff] text-2xl px-6 py-4
+                    <Link href="/investorSignUp" className="bg-transparent border-2 border-[#ffffff] text-[#ffffff] text-2xl px-6 py-4
                     rounded-lg shadow-md hover:bg-[#ffffff] hover:text-[#002e5f] transition duration-300 flex items-center">
                         Become an Investor
                         <OpenOutline className="h-[16px] w-[16px] ml-3 mt-[-1px]" />

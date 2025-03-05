@@ -40,7 +40,7 @@ const Navbar = () => {
                 </h2>
 
                 <Image
-                    src="/favicon.png"
+                    src="/logo.png"
                     alt="EQ Logo"
                     width={26}
                     height={26}

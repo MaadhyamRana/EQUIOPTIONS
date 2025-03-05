@@ -4,6 +4,8 @@
 
 - Advisory board and FAQ sections
 - Resolve for NPM and other security vulnerabilities
+- EmailJS fix
+- Business Listings and Profile page
 
 <hr>
 
